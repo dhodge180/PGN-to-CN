@@ -97,11 +97,11 @@ def parse_pgn(pgn_text):
         clean_moves = re.sub(r'\s+', ' ', clean_moves).strip()  # collapse whitespace    
 
         # Skip games with no FEN
-        if 'FEN' not in headers:
-            continue
+        #if 'FEN' not in headers:
+        #    continue
 
         title   = f"{format_title(headers.get('White', ''))} \u2013 {headers.get('Event', '')}"
-        fen     = headers['FEN']
+        fen     = headers.get('FEN', 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1') # Read from header, else set starting position
         subtext = format_subtext(headers.get('Result', ''), fen)
         moves = clean_moves
 
