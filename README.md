@@ -1,6 +1,6 @@
-This program takes as input a list of PGNs, like from the van der Heiden database.
+This program takes as input a .pgn file (which can be a list of games/studies), like from the van der Heiden database.
 
-It reads Event, Composer, starting FEN (and who to move), and moves.  
+It reads Event, Composer (from the White field), starting FEN (and who to move), and moves.  
 It converts to ChessNavigator notation.  
 Title: [Author -- Tourney]  
 FEN: [starting FEN]  
